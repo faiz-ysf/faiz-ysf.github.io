@@ -1,0 +1,29 @@
+/* style.css */
+/* Custom styles can be added here. Tailwind CSS is used for the majority of the styling. */
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Subtle background noise/texture effect */
+.bg-noise {
+    background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+}
+
+/* Custom scrollbar for a more polished look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a202c;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4a5568;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #718096;
+}
