@@ -2,107 +2,93 @@
   --global-font-size: 15px;
   --global-line-height: 1.4em;
   --global-space: 10px;
-  --font-stack: 'Inter', Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;
+  --font-stack: 'Consolas', 'Menlo', 'Monaco', monospace;
   
   /* Dark Theme Colors */
-  --global-color: #f4f4f4;
+  --global-color: #ffffff; /* White text */
   --global-bg: #1a1a1a;
-  --primary-color: #22c55e; /* Green terminal accent */
+  --primary-color: #22c55e;
   --secondary-color: #a3a3a3;
   --error-color: #e51400;
   --control-bg: #262626;
-  --control-fg: #f4f4f4;
+  --control-fg: #ffffff;
 }
 
 body {
     background-color: var(--global-bg);
     color: var(--global-color);
+    font-family: var(--font-stack);
 }
 
 .container {
-    max-width: 960px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 2rem 1rem;
 }
 
-/* Custom Grid for Projects */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+/* Main Layout: Sidebar + Content */
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
 }
 
-.grid-2-col {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+.sidebar {
+    min-width: 220px;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+    border-right: 1px solid var(--secondary-color);
+    padding-right: 2rem;
 }
 
-@media (max-width: 600px) {
-    .grid-2-col {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Blog Styles */
-.blog-list {
+.sidebar nav ul {
     list-style: none;
     padding: 0;
 }
 
-.blog-entry {
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px dashed var(--secondary-color);
+.sidebar nav ul li {
+    margin-bottom: 1rem;
 }
 
-.blog-entry:last-child {
-    border-bottom: none;
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: var(--global-color);
+    display: block;
 }
 
-.blog-date {
-    font-size: 0.9rem;
-    color: var(--secondary-color);
-    margin-bottom: 0.5rem;
+.sidebar nav ul li a:hover {
+    color: var(--primary-color);
 }
 
-.terminal-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.terminal-card header {
-    background-color: var(--control-bg);
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid var(--global-color);
-    font-weight: bold;
-}
-
-.terminal-card .card-body {
-    padding: 1rem;
+.content {
     flex-grow: 1;
 }
 
-.tag {
-    display: inline-block;
-    background: var(--control-bg);
-    border: 1px solid var(--global-color);
-    padding: 2px 8px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    font-size: 0.8rem;
+@media (max-width: 800px) {
+    .main-layout {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .sidebar {
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid var(--secondary-color);
+        padding-right: 0;
+        padding-bottom: 1rem;
+    }
 }
 
-/* Utility to match Terminal CSS sections */
+/* Sections */
 section {
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
-#about {
-    margin-top: 2rem;
+section h2 {
+    border-bottom: 1px solid var(--global-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
 }
 
 .terminal-prompt {
@@ -114,7 +100,33 @@ section {
     content: "> ";
 }
 
-/* Smooth transition for hover effects */
-.btn, a {
-    transition: all 0.2s ease;
+/* Clean Cards/Lists (No Buttons) */
+.terminal-card {
+    border: 1px solid var(--global-color);
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+
+.terminal-card header {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.tag {
+    display: inline-block;
+    border: 1px solid var(--secondary-color);
+    padding: 2px 8px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
 }

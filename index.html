@@ -4,168 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name | Terminal Portfolio</title>
-    <!-- Terminal CSS CDN -->
     <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.4/dist/terminal.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body class="terminal">
 
     <div class="container">
-        <!-- Navigation -->
-        <div class="terminal-nav">
-            <header class="terminal-logo">
-                <div class="logo terminal-prompt"><a href="#" class="no-style">Portfolio</a></div>
-            </header>
-            <nav class="terminal-menu">
-                <ul>
-                    <li><a class="menu-item" href="#about">About</a></li>
-                    <li><a class="menu-item" href="#projects">Projects</a></li>
-                    <li><a class="menu-item" href="#personal-projects">Personal</a></li>
-                    <li><a class="menu-item" href="#blog">Blog</a></li>
-                    <li><a class="menu-item" href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <div class="main-layout">
+            
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <header>
+                    <div class="terminal-prompt" style="font-size: 1.5rem; margin-bottom: 2rem;">
+                        <a href="#" class="no-style">Portfolio</a>
+                    </div>
+                </header>
+                <nav>
+                    <ul>
+                        <li><a href="#personal-information">Information</a></li>
+                        <li><a href="#last-project">Last Project</a></li>
+                        <li><a href="#current-interest">Interest</a></li>
+                        <li><a href="#blogs">Blogs</a></li>
+                    </ul>
+                </nav>
+            </aside>
 
-        <hr>
-
-        <!-- Hero / About Section -->
-        <section id="about">
-            <h1>Hi, I'm <span class="terminal-prompt">Your Name</span></h1>
-            <p>
-                A passionate developer focused on building beautiful, performant, and maintainable software solutions. 
-                Currently exploring the intersection of modern web technologies and retro aesthetics.
-            </p>
-            <div class="terminal-alert">
-                Status: Available for new opportunities
-            </div>
-            <div style="margin-top: 2rem;">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-ghost">Contact Me</a>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Featured Projects</h2>
-            <div class="grid-container">
+            <!-- Main Content -->
+            <main class="content">
                 
-                <!-- Project 1 -->
-                <div class="terminal-card">
-                    <header>Project Title One</header>
-                    <div class="card-body">
-                        <p>A brief description of the amazing features and technology used in this project.</p>
-                        <div style="margin: 1rem 0;">
-                            <span class="tag">React</span>
-                            <span class="tag">Tailwind</span>
-                            <span class="tag">TypeScript</span>
-                        </div>
-                        <a href="#" class="btn btn-default btn-block">Source Code</a>
+                <!-- PERSONAL INFORMATION Section -->
+                <section id="personal-information">
+                    <h2>Personal Information</h2>
+                    <p>
+                        I am a developer focused on technical excellence and clean software design. 
+                        This portfolio serves as a terminal-style interface to my work and thoughts.
+                    </p>
+                    <div style="margin-top: 1.5rem;">
+                        <p><strong>Name:</strong> Your Name</p>
+                        <p><strong>Role:</strong> Software Engineer</p>
+                        <p><strong>GitHub:</strong> <a href="#">github.com/yourname</a></p>
                     </div>
-                </div>
+                </section>
 
-                <!-- Project 2 -->
-                <div class="terminal-card">
-                    <header>Project Title Two</header>
-                    <div class="card-body">
-                        <p>Another great application focused on solving real-world problems with elegant code.</p>
-                        <div style="margin: 1rem 0;">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">Express</span>
-                        </div>
-                        <a href="#" class="btn btn-default btn-block">Source Code</a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="terminal-card">
-                    <header>Project Title Three</header>
-                    <div class="card-body">
-                        <p>High-performance mobile application built with the latest cross-platform frameworks.</p>
-                        <div style="margin: 1rem 0;">
-                            <span class="tag">Flutter</span>
-                            <span class="tag">Dart</span>
-                            <span class="tag">Firebase</span>
-                        </div>
-                        <a href="#" class="btn btn-default btn-block">Source Code</a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Personal Projects Section -->
-        <section id="personal-projects">
-            <h2>Personal Projects</h2>
-            <div class="grid-2-col">
-                <div class="terminal-card">
-                    <header>Large Scale App</header>
-                    <div class="card-body">
-                        <p>A comprehensive personal project demonstrating advanced architectural patterns and complex state management.</p>
-                        <div style="margin: 1rem 0;">
-                            <span class="tag">Next.js</span>
-                            <span class="tag">GraphQL</span>
-                            <span class="tag">Prisma</span>
-                        </div>
-                        <a href="#" class="btn btn-default btn-block">Details</a>
-                    </div>
-                </div>
-                <div class="terminal-card">
-                    <header>Open Source Contrib</header>
-                    <div class="card-body">
-                        <p>Detailed documentation of contributions to major open-source repositories and community tools.</p>
+                <!-- LAST PROJECT Section -->
+                <section id="last-project">
+                    <h2>Last Project</h2>
+                    <div class="terminal-card">
+                        <header>Featured System Architecture</header>
+                        <p>A recent implementation of a scalable backend system using modern architectural patterns.</p>
                         <div style="margin: 1rem 0;">
                             <span class="tag">Rust</span>
-                            <span class="tag">Wasm</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Kubernetes</span>
                         </div>
-                        <a href="#" class="btn btn-default btn-block">Details</a>
+                        <a href="#">View Repository</a>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <hr>
+                <!-- CURRENT INTEREST Section -->
+                <section id="current-interest">
+                    <h2>Current Interest</h2>
+                    <p>I am currently exploring the following technologies and concepts:</p>
+                    <ul>
+                        <li>Low-level systems programming and memory safety.</li>
+                        <li>Decentralized protocols and peer-to-peer networking.</li>
+                        <li>Minimalist UI/UX design and terminal aesthetics.</li>
+                    </ul>
+                </section>
 
-        <!-- Blog Section -->
-        <section id="blog">
-            <h2>Latest Posts</h2>
-            <div class="blog-list">
-                <div class="blog-entry">
-                    <div class="blog-date">2026-04-30</div>
-                    <h3><a href="#">The Future of Terminal-Based UI</a></h3>
-                    <p>Exploring why developers are returning to text-based aesthetics for modern tooling and portfolios.</p>
-                    <a href="#" class="btn btn-ghost">Read More</a>
-                </div>
-                <div class="blog-entry">
-                    <div class="blog-date">2026-04-15</div>
-                    <h3><a href="#">Mastering CSS Grid in 2026</a></h3>
-                    <p>Advanced techniques for building responsive, complex layouts without the overhead of massive frameworks.</p>
-                    <a href="#" class="btn btn-ghost">Read More</a>
-                </div>
-            </div>
-        </section>
+                <!-- BLOGS Section -->
+                <section id="blogs">
+                    <h2>Blogs</h2>
+                    <p>Writing and technical logs will be posted here soon.</p>
+                </section>
 
-        <hr>
+                <footer>
+                    <hr>
+                    <p>&copy; 2026 Your Name. Powered by Terminal CSS.</p>
+                </footer>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Get In Touch</h2>
-            <p>I'm always open to new opportunities, collaborations, or just a friendly chat. Feel free to reach out!</p>
-            <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
-                <a href="#" class="btn btn-primary">GitHub</a>
-                <a href="#" class="btn btn-primary">LinkedIn</a>
-                <a href="#" class="btn btn-ghost">Email Me</a>
-            </div>
-        </section>
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2026 Your Name. Powered by <a href="https://terminalcss.xyz/" target="_blank">Terminal CSS</a>.</p>
-        </footer>
+            </main>
+        </div>
     </div>
 
 </body>
