@@ -4,9 +4,9 @@
   --global-space: 10px;
   --font-stack: 'Consolas', 'Menlo', 'Monaco', monospace;
   
-  /* Dark Theme Colors */
-  --global-color: #ffffff; /* White text */
-  --global-bg: #1a1a1a;
+  /* Terminal CSS Core Variables */
+  --font-color: #ffffff;      /* Pure white text */
+  --background-color: #1a1a1a;
   --primary-color: #22c55e;
   --secondary-color: #a3a3a3;
   --error-color: #e51400;
@@ -15,9 +15,14 @@
 }
 
 body {
-    background-color: var(--global-bg);
-    color: var(--global-color);
+    background-color: var(--background-color);
+    color: var(--font-color);
     font-family: var(--font-stack);
+}
+
+/* Ensure all elements inherit the white color */
+.terminal, .terminal p, .terminal h1, .terminal h2, .terminal h3, .terminal li, .terminal div {
+    color: var(--font-color) !important;
 }
 
 .container {
@@ -53,12 +58,12 @@ body {
 
 .sidebar nav ul li a {
     text-decoration: none;
-    color: var(--global-color);
+    color: var(--font-color) !important;
     display: block;
 }
 
 .sidebar nav ul li a:hover {
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
 }
 
 .content {
@@ -85,15 +90,16 @@ section {
 }
 
 section h2 {
-    border-bottom: 1px solid var(--global-color);
+    border-bottom: 1px solid var(--font-color);
     padding-bottom: 0.5rem;
     margin-bottom: 2rem;
     text-transform: uppercase;
+    color: var(--font-color) !important;
 }
 
 .terminal-prompt {
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
 }
 
 .terminal-prompt::before {
@@ -102,7 +108,7 @@ section h2 {
 
 /* Clean Cards/Lists (No Buttons) */
 .terminal-card {
-    border: 1px solid var(--global-color);
+    border: 1px solid var(--font-color);
     margin-bottom: 2rem;
     padding: 1rem;
 }
@@ -111,6 +117,7 @@ section h2 {
     font-weight: bold;
     margin-bottom: 1rem;
     text-transform: uppercase;
+    color: var(--font-color) !important;
 }
 
 .tag {
@@ -120,13 +127,18 @@ section h2 {
     margin-right: 5px;
     margin-bottom: 5px;
     font-size: 0.8rem;
+    color: var(--font-color) !important;
 }
 
 a {
-    color: var(--primary-color);
+    color: var(--primary-color) !important;
     text-decoration: underline;
 }
 
 a:hover {
     text-decoration: none;
+}
+
+hr {
+    border-color: var(--secondary-color);
 }
