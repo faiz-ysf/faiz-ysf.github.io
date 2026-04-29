@@ -1,177 +1,117 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Portfolio</title>
+    <title>Your Name | Terminal Portfolio</title>
+    <!-- Terminal CSS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.4/dist/terminal.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#3b82f6',
-                        secondary: '#1e293b',
-                        accent: '#6366f1',
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        .glass-morphism {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-    </style>
 </head>
-<body class="bg-slate-900 text-slate-100 bg-noise">
+<body class="terminal">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass-morphism py-4">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-primary tracking-tight">Portfolio</a>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="hover:text-primary transition-colors">About</a>
-                <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
-                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
-            </div>
+    <div class="container">
+        <!-- Navigation -->
+        <div class="terminal-nav">
+            <header class="terminal-logo">
+                <div class="logo terminal-prompt"><a href="#" class="no-style">Portfolio</a></div>
+            </header>
+            <nav class="terminal-menu">
+                <ul>
+                    <li><a class="menu-item" href="#about">About</a></li>
+                    <li><a class="menu-item" href="#projects">Projects</a></li>
+                    <li><a class="menu-item" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="about" class="min-h-screen flex items-center pt-20">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 text-center md:text-left">
-                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                    Hi, I'm <span class="text-primary">Your Name</span>
-                </h1>
-                <p class="text-xl text-slate-400 mb-8 max-w-xl">
-                    A passionate developer focused on building beautiful, performant, and maintainable software solutions.
-                </p>
-                <div class="flex justify-center md:justify-start space-x-4">
-                    <a href="#projects" class="bg-primary hover:bg-blue-600 px-8 py-3 rounded-full font-semibold transition-all shadow-lg shadow-blue-500/20">
-                        View Projects
-                    </a>
-                    <a href="#contact" class="border border-slate-700 hover:border-primary px-8 py-3 rounded-full font-semibold transition-all">
-                        Contact Me
-                    </a>
-                </div>
-            </div>
-            <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
-                <div class="relative w-64 h-64 md:w-80 md:h-80">
-                    <div class="absolute inset-0 bg-primary rounded-full blur-3xl opacity-20"></div>
-                    <img src="https://via.placeholder.com/400" alt="Profile" class="rounded-2xl shadow-2xl relative z-10 w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
-                </div>
-            </div>
-        </div>
-    </section>
+        <hr>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 bg-slate-800/50">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold mb-16 text-center">Featured Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                
-                <!-- Project Card 1 -->
-                <div class="group glass-morphism rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="h-48 bg-slate-700 overflow-hidden">
-                        <img src="https://via.placeholder.com/600x400" alt="Project 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Project Title One</h3>
-                        <p class="text-slate-400 mb-4 line-clamp-2">
-                            A brief description of the amazing features and technology used in this project.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs bg-slate-700 px-3 py-1 rounded-full text-slate-300">React</span>
-                            <span class="text-xs bg-slate-700 px-3 py-1 rounded-full text-slate-300">Tailwind</span>
-                            <span class="text-xs bg-slate-700 px-3 py-1 rounded-full text-slate-300">TypeScript</span>
-                        </div>
-                        <a href="#" class="text-primary hover:text-blue-400 font-semibold inline-flex items-center group">
-                            Learn More 
-                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project Card 2 -->
-                <div class="group glass-morphism rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="h-48 bg-slate-700 overflow-hidden">
-                        <img src="https://via.placeholder.com/600x400" alt="Project 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Project Title Two</h3>
-                        <p class="text-slate-400 mb-4 line-clamp-2">
-                            Another great application focused on solving real-world problems with elegant code.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs bg-slate-700 px-3 py-1 rounded-full text-slate-300">Node.js</span>
-                            <span class="text-xs bg-slate-700 px-3 py-1 rounded-full text-slate-300">MongoDB</span>
-                            <span class="text-xs bg-slate-700 px-3 py-1 rounded-full text-slate-300">Express</span>
-                        </div>
-                        <a href="#" class="text-primary hover:text-blue-400 font-semibold inline-flex items-center group">
-                            Learn More 
-                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project Card 3 -->
-                <div class="group glass-morphism rounded-2xl overflow-hidden hover:transform hover:-translate-y-2 transition-all duration-300">
-                    <div class="h-48 bg-slate-700 overflow-hidden">
-                        <img src="https://via.placeholder.com/600x400" alt="Project 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Project Title Three</h3>
-                        <p class="text-slate-400 mb-4 line-clamp-2">
-                            High-performance mobile application built with the latest cross-platform frameworks.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs bg-slate-700 px-3 py-1 rounded-full text-slate-300">Flutter</span>
-                            <span class="text-xs bg-slate-700 px-3 py-1 rounded-full text-slate-300">Dart</span>
-                            <span class="text-xs bg-slate-700 px-3 py-1 rounded-full text-slate-300">Firebase</span>
-                        </div>
-                        <a href="#" class="text-primary hover:text-blue-400 font-semibold inline-flex items-center group">
-                            Learn More 
-                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-24">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
-            <p class="text-xl text-slate-400 mb-12 max-w-2xl mx-auto">
-                I'm always open to new opportunities, collaborations, or just a friendly chat. Feel free to reach out!
+        <!-- Hero / About Section -->
+        <section id="about">
+            <h1>Hi, I'm <span class="terminal-prompt">Your Name</span></h1>
+            <p>
+                A passionate developer focused on building beautiful, performant, and maintainable software solutions. 
+                Currently exploring the intersection of modern web technologies and retro aesthetics.
             </p>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="text-3xl hover:text-primary transition-colors">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-                <a href="#" class="text-3xl hover:text-primary transition-colors">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                </a>
+            <div class="terminal-alert">
+                Status: Available for new opportunities
             </div>
-        </div>
-    </section>
+            <div style="margin-top: 2rem;">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-ghost">Contact Me</a>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer class="py-12 border-t border-slate-800">
-        <div class="container mx-auto px-6 text-center text-slate-500 text-sm">
-            <p>&copy; 2026 Your Name. Built with Tailwind CSS & ❤️</p>
-        </div>
-    </footer>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="grid-container">
+                
+                <!-- Project 1 -->
+                <div class="terminal-card">
+                    <header>Project Title One</header>
+                    <div class="card-body">
+                        <p>A brief description of the amazing features and technology used in this project.</p>
+                        <div style="margin: 1rem 0;">
+                            <span class="tag">React</span>
+                            <span class="tag">Tailwind</span>
+                            <span class="tag">TypeScript</span>
+                        </div>
+                        <a href="#" class="btn btn-default btn-block">Source Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="terminal-card">
+                    <header>Project Title Two</header>
+                    <div class="card-body">
+                        <p>Another great application focused on solving real-world problems with elegant code.</p>
+                        <div style="margin: 1rem 0;">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">MongoDB</span>
+                            <span class="tag">Express</span>
+                        </div>
+                        <a href="#" class="btn btn-default btn-block">Source Code</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="terminal-card">
+                    <header>Project Title Three</header>
+                    <div class="card-body">
+                        <p>High-performance mobile application built with the latest cross-platform frameworks.</p>
+                        <div style="margin: 1rem 0;">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Dart</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                        <a href="#" class="btn btn-default btn-block">Source Code</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p>I'm always open to new opportunities, collaborations, or just a friendly chat. Feel free to reach out!</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                <a href="#" class="btn btn-primary">GitHub</a>
+                <a href="#" class="btn btn-primary">LinkedIn</a>
+                <a href="#" class="btn btn-ghost">Email Me</a>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Your Name. Powered by <a href="https://terminalcss.xyz/" target="_blank">Terminal CSS</a>.</p>
+        </footer>
+    </div>
 
 </body>
 </html>

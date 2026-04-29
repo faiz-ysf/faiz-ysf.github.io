@@ -1,29 +1,85 @@
-/* style.css */
-/* Custom styles can be added here. Tailwind CSS is used for the majority of the styling. */
+:root {
+  --global-font-size: 15px;
+  --global-line-height: 1.4em;
+  --global-space: 10px;
+  --font-stack: 'Inter', Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;
+  
+  /* Dark Theme Colors */
+  --global-color: #f4f4f4;
+  --global-bg: #1a1a1a;
+  --primary-color: #22c55e; /* Green terminal accent */
+  --secondary-color: #a3a3a3;
+  --error-color: #e51400;
+  --control-bg: #262626;
+  --control-fg: #f4f4f4;
+}
 
 body {
-    font-family: 'Inter', sans-serif;
+    background-color: var(--global-bg);
+    color: var(--global-color);
 }
 
-/* Subtle background noise/texture effect */
-.bg-noise {
-    background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
-/* Custom scrollbar for a more polished look */
-::-webkit-scrollbar {
-    width: 8px;
+/* Custom Grid for Projects */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
-::-webkit-scrollbar-track {
-    background: #1a202c;
+.terminal-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-::-webkit-scrollbar-thumb {
-    background: #4a5568;
-    border-radius: 4px;
+.terminal-card header {
+    background-color: var(--control-bg);
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--global-color);
+    font-weight: bold;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #718096;
+.terminal-card .card-body {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.tag {
+    display: inline-block;
+    background: var(--control-bg);
+    border: 1px solid var(--global-color);
+    padding: 2px 8px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+}
+
+/* Utility to match Terminal CSS sections */
+section {
+    margin-bottom: 4rem;
+}
+
+#about {
+    margin-top: 2rem;
+}
+
+.terminal-prompt {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.terminal-prompt::before {
+    content: "> ";
+}
+
+/* Smooth transition for hover effects */
+.btn, a {
+    transition: all 0.2s ease;
 }
