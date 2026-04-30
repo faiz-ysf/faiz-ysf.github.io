@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Resource | Simple.css</title>
+    <!-- Simple.css CDN -->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <style>
+        /* Force Dark Mode and Pure White Text */
+        :root {
+            --bg: #1a1a1a;
+            --accent: #22c55e;
+            --text: #ffffff;
+            --text-light: #ffffff;
+            --border: #444;
+            --accent-bg: #262626;
+            --code: #22c55e;
+            --preformatted: #262626;
+            --disabled: #333;
+        }
+
+        /* Absolute White Text Override */
+        body, h1, h2, h3, h4, h5, h6, p, li, blockquote, dt, dd, strong, em, b, i {
+            color: #ffffff !important;
+        }
+
+        /* Links stay green for visibility but can be white if you prefer */
+        a {
+            color: var(--accent) !important;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+            padding-top: 2rem;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Custom Resource Page</h1>
+        <p>This page uses <em>Simple.css</em> with a pure white text override.</p>
+        <nav>
+            <a href="../index.html">← Back to Portfolio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>A Different Aesthetic</h2>
+            <p>
+                While the main portfolio uses a terminal look, this page demonstrates how you can link to resources 
+                with entirely different styling. Simple.css provides a clean, document-focused layout.
+            </p>
+        </section>
+
+        <section>
+            <h2>Content Structure</h2>
+            <p>
+                You can use standard HTML elements like lists, tables, and blockquotes, and they will be styled 
+                automatically by the library.
+            </p>
+            <ul>
+                <li>Typography-focused design</li>
+                <li>Responsive out of the box</li>
+                <li>Minimalist and lightweight</li>
+            </ul>
+        </section>
+
+        <blockquote>
+            "Simplicity is the ultimate sophistication."
+        </blockquote>
+
+        <section>
+            <h2>Technical Details</h2>
+            <p>
+                The text color has been strictly set to <code>#ffffff</code> to meet your requirement, 
+                overriding the default dark-grey usually found in dark themes.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Your Name. Built with Simple.css.</p>
+    </footer>
+</body>
+</html>
